@@ -254,7 +254,7 @@ nav button a:hover{
 .counter-box{
     position: relative;
     width: 300px;
-     margin-left: 30px;
+    margin-left: 30px;
 }
 .counter-box::before{
     content: "";
