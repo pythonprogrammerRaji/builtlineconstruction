@@ -1,0 +1,241 @@
+/* mobile version */
+@media(max-width: 600px){
+    .section-container{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    header{
+        height: auto;
+        flex-direction: column;
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 6px 0px;
+    }
+    header img{
+        margin-top: 0px;
+        /* width: 300px;
+        height: 300px; */
+    }
+    nav{
+        position: relative;
+        left: 0;
+        margin-top: -50px;
+        width: 100%;
+        text-align: center;
+    }
+    nav a{
+        display: block;
+        padding: 10px;
+        font-size: 15px;
+    }
+   
+    nav button{
+    width: 150px;
+    padding: 0px;
+   
+    }
+    nav button a:hover{
+    height: fit-content;
+
+    }
+    .hero{
+        width: 100%;
+    }
+    .hero::before{
+        transform: translateX(150%);
+        /* width: fit-content; */
+        width: 100%;
+        max-width: 700px;
+        overflow: hidden;
+
+    }
+    .hero.show-bg::before{
+        transform: translateX(0);
+        width: 100%;
+        max-width: 700px;
+        /* height: 300px; */
+    }
+    .hero-content{
+         position: relative;
+        left: -10px;
+        width: 100%;
+        
+    }
+    .hero-content h1{
+        font-size: 25px;
+        
+    }
+    .hero-content::before{
+         width: 70%;
+         top: -380px;
+         left: -60px;
+         height: auto;
+
+    }
+    .hero-content p{
+        font-size: 18px;
+        margin-top: -40px;
+    }
+
+    .about-section{
+        height: auto;
+        top: -50px;
+        margin:10px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        display: flex;
+        height: 100%;
+        position: relative;
+        padding: 20px;
+        min-height: 1000px;
+        
+    }
+    .about-content{
+        flex-basis: 200px;
+        padding: 5px;
+        flex-grow: 1;
+        max-width: 1200px;
+        width: 100%;
+        flex-wrap: wrap;  
+        
+    }
+    .about-section h1{
+        text-align: center;
+    }
+    
+    .aboutText p{
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+     }
+    .about-section h1::after{
+        position: absolute;
+        top: 40px;
+        left: 200px;
+        margin-top: 5px;
+    }
+    .about-image{
+        height: 300px;
+        width: auto;
+        display: block;
+    }
+    
+    .about-content img{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .content-box{
+        width: 100%;
+        margin-left: 30px;   
+    }
+    .counter-box::before{
+        height: 210px;
+        top: 60px;
+    }
+    .counter-box h2{
+        font-size: 70px;
+        margin-top: 20px;
+    }
+    .counter-container{
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+}
+/* tables */
+@media (min-width: 601px) and (max-width: 900px) {
+    .section-container{
+        width: 100%;
+        overflow-x: hidden;
+    }
+     header{
+        height: auto;
+        /* flex-direction: column; */
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 6px 0px;
+    }
+    header img{
+        margin-top: 0px;   
+    }
+    nav{
+        width: 500px;
+        margin-top: -50px;
+        position: fixed;
+        left: 0;
+        top: 0px;
+        padding: 5px;
+    }
+    nav a{
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .hero{
+        margin-top: -110px;
+    }
+    .hero-content h1{
+        font-size: 30px;
+    }
+    .hero-content p{
+        font-size: 18px;
+    }
+    .hero-content{
+        position: relative;
+        left: -15px;
+    }
+     .hero-content::before{
+        width: 600px;
+     }
+    .about-section{
+        height: fit-content;
+        padding: 5px;
+    }
+    .about-content{
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+    }
+    .about-section h1::after{
+        position: absolute;
+        left: 300px;
+    }
+    .aboutText{
+        flex-grow: 1;
+        flex-basis: 200;
+        width: 100%;
+       
+    }
+    .about-image{
+        width: 100%;
+    }
+    .counter-container{
+        flex-wrap: wrap;
+        height: 100vh;
+        display: flex;
+        padding: 0px 10px;
+         /* margin-top: 40px; */
+
+    }
+    .counter-box{
+        position: relative;
+        flex-grow: 1;
+        flex-basis: 200;
+        flex-wrap: wrap;
+        width:200px;
+
+    }
+    .counter-box::before{
+        height: 250px;
+        position: absolute;
+        top: 60px;
+        padding: 0;
+    }
+    .counter-box h2{
+        margin-top: 30px;
+        font-size: 80px;
+    }   
+
+}
