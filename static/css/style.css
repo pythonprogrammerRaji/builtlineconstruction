@@ -245,15 +245,15 @@ nav button a:hover{
 .counter-container{
     display: flex;
     justify-content: space-around;
-    padding: 60px 40px;
+    padding: 40px 10px;
     background: #f9f9f9;
     height: fit-content;
 }
 .counter-box{
     position: relative;
-    width: 320px;
+    width: 300px;
     /* text-align: center; */
-     margin-left: 100px;
+     margin-left: 30px;
 }
 .counter-box::before{
     content: "";
@@ -261,8 +261,8 @@ nav button a:hover{
     width: 5px;
     height: 300px;
     position: absolute;
-    left: -30px;
-    top: -10px;
+    left: -20px;
+    top: -0px;
 }
 .counter-box h2{
     font-size: 100px;
