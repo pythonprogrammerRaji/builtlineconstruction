@@ -79,7 +79,7 @@
     }
 
     .about-section{
-        height: fit-content;
+        height: auto !important;
         top: -50px;
         margin:10px;
         flex-direction: column;
@@ -98,6 +98,7 @@
         max-width: 1200px;
         width: 100%;
         flex-wrap: wrap;  
+        height: fit-content;
         
     }
     .about-section h1{
@@ -141,7 +142,8 @@
     .counter-container{
         flex-wrap: wrap;
         height: fit-content;
-        margin-top: 40px;
+        margin-top:-80px;
+
     }
     .footer-container{
         width: 100%;
