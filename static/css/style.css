@@ -250,11 +250,11 @@ nav button a:hover{
     padding: 40px 10px;
     background: #f9f9f9;
     height: fit-content;
+    margin-top: -130px;
 }
 .counter-box{
     position: relative;
     width: 300px;
-    margin-left: 20px;
 }
 .counter-box::before{
     content: "";
@@ -278,3 +278,90 @@ nav button a:hover{
 .counter-box p{
     color: gray;
 }
+.footer-container{
+    width: 100%;
+    background-color: darkgoldenrod;
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    gap: 60px;
+    
+}
+.footer-box{
+    width: 200px;
+    height: 300px;
+    color: white;
+}
+.footer-image{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+   
+}
+.footer-image img{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 50px;
+
+}
+.footer-image h2{
+    display: inline;
+    font-size: 18px;
+}
+.footer-box h4{
+    font-size: 15px;
+    margin-top: 20px;
+    
+}
+.footer-box h3{
+    position: relative;
+}
+.footer-box p{
+    font-size: 15px;
+    padding: 10px;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+    margin-left: -20px;
+    margin-top: 20px;
+}
+.icons i{
+    color: #fff;
+    font-size: 25px;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+}
+.icons i:hover{
+    transform: scale(1.3);
+}
+.fa-facebook-f:hover{
+    color: #006eff;
+}
+.fa-instagram:hover{
+    color:#db0b51;
+}
+.fa-twitter:hover{
+    color: #0ca2ff;
+}
+.fa-youtube:hover{
+    color: red;
+}
+.fa-linkedin-in:hover{
+    color: #005f93;
+}
+.footer-links a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+     position: relative;
+}
+
+
+

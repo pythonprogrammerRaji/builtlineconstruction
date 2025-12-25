@@ -79,7 +79,7 @@
     }
 
     .about-section{
-        height: auto;
+        height: fit-content;
         top: -50px;
         margin:10px;
         flex-direction: column;
@@ -121,13 +121,14 @@
         display: block;
     }
     
-    .about-content img{
+    .about-image img{
         width: 100%;
         flex-wrap: wrap;
     }
     .content-box{
         width: 100%;
         margin-left: 30px;   
+        height: fit-content;
     }
     .counter-box::before{
         height: 210px;
@@ -140,7 +141,27 @@
     .counter-container{
         flex-wrap: wrap;
         height: fit-content;
+        margin-top: 40px;
     }
+    .footer-container{
+        width: 100%;
+        flex-wrap: wrap;
+        /* gap: 20px; */
+        display: flex;
+        height: fit-content;
+        flex-direction: column;
+    }
+    .footer-box {
+        flex-grow: 1;
+        flex-basis: 200;
+        height: auto;
+        width: 100%;
+    }
+    .icons{
+        display: flex;
+        flex-wrap: wrap;
+    }
+   
 }
 /* tables */
 @media (min-width: 601px) and (max-width: 900px) {
@@ -157,19 +178,23 @@
         padding: 6px 0px;
     }
     header img{
-        margin-top: 0px;   
+        margin-top: 0px; 
+        margin-left: -10px;  
     }
     nav{
-        width: 500px;
+        width: 400px;
         margin-top: -50px;
         position: fixed;
         left: 0;
         top: 0px;
-        padding: 5px;
+        padding: 0px;
     }
     nav a{
-        font-size: 12px;
-        padding: 5px 10px;
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+    nav button{
+         padding: 10px 0px;
     }
     .hero{
         margin-top: -110px;
@@ -213,7 +238,7 @@
     }
     .counter-container{
         flex-wrap: wrap;
-        height: 100vh;
+        height: fit-content;
         display: flex;
         padding: 0px 10px;
          /* margin-top: 40px; */
@@ -237,5 +262,43 @@
         margin-top: 30px;
         font-size: 80px;
     }   
+    .footer-container{
+        width: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        height: fit-content;
+        
+    }
+    .footer-box {
+        flex-grow: 1;
+        flex-basis: 200;
+        height: auto;
+        width: 200px;
+    }
+    .icons{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media(min-width: 901px) and  (max-width: 1900){
+    .hero{
+        width: 100%;
+    }
+    nav{
+        width: fit-content; 
+    }
+    nav a{
+        font-size: 13px;
+    }
+    #heroText{
+        font-size: 2px;
+    }
+    .hero-content{
+        margin-left: -30px;
+    }
+
+
 
 }
