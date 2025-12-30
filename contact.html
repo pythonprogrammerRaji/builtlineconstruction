@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builtline Construction</title>
+    <link rel="stylesheet" href="static/css/style.css?v=1">
+    <link rel="stylesheet" href="static/css/media.css?v=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" rel="stylesheet">
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+        <header>
+        <img src="static/images/logo (2).png" alt="" class="Image">
+        <nav>
+            <a href="index.html"><span>HOME</span></a>
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICE</a>
+            <a href="#project">PROJECTS</a>
+            <a href="contact.html">CONTACT</a>
+            <button><a href="#get">GET A QUOTE</a></button>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+    <div class="contact-content">
+
+        <div class="contact-text">
+            <h1>Let's create something <br> great <span>- GET IN TOUCH </span> <br> & book your free <br> walkthrough.</h1>
+        </div>
+
+        <div class="contact-box">
+            <div class="text-box">
+                <h5>CONTACT</h5>
+                <p>9945599401</p>
+                <p>9606425860</p>
+            </div>
+
+             <div class="text-box">
+                <h5>Address</h5>
+                <p>#4th Main Road CA's, near Lingaraj Pujari & Co.<br>Malleshwaram, Bengaluru, Karnataka -560003</p>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <div class="text-box">
+                <h5>Email</h5>
+                <p>builtlineconstruction@gmail.com</p>
+            </div>
+
+             <div class="text-icons">
+                <h5>Socials</h5>
+
+                <a href="https://www.facebook.com/builtlineconstruction/%20@builtlineconstruction"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="https://www.instagram.com/builtline_construction/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="https://x.com/Builtline_"><i class="fa-brands fa-twitter"></i></a>
+
+                <a href=" https://in.linkedin.com/company/builtline-construction BuiltLine"><i class="fa-brands fa-youtube"></i></a>
+
+                <a href=" https://in.linkedin.com/company/builtline-construction BuiltLine"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="contact-container" id="get">
+        <h1>Contact Form</h1>
+        <p class="subtitle">
+            Reach out with any queries or project details
+        </p>
+
+        <form class="contact-form" id="form">
+            <div class="form-box two-cols">
+                <input type="text" placeholder="First Name" id="firstname" required>
+                <input type="text" placeholder="Last Name" id="lastname" required>
+            </div>
+
+            <div class="form-box" >
+                <input type="email" placeholder="yourname@gmail.com" id="email" required>
+            </div>
+
+            <div class="form-box">
+                <input type="tel" placeholder="+91 1234567890" id="number" required>
+
+            </div>
+
+            <div class="form-box radio-row" id="bhkgroup">
+                <label><input type="radio" name="bhk" value="4 BHK">4 BHK</label>
+                <label><input type="radio" name="bhk" value="3 BHK">3 BHK</label>
+                <label><input type="radio" name="bhk" value="2 BHK">2 BHK</label>
+                <label><input type="radio" name="bhk" value="1 BHK">1 BHK</label>
+            </div>
+
+            <div class="form-box">
+                <select id="project" required>
+                    <option value='' selected disabled>Interior Design</option>
+                    <option value="architecture">Architecture</option>
+                    <option value="construction">Construction</option>
+                    <option value="renovation">Renovation</option>
+                </select>
+            </div>
+
+            <div class="form-box">
+                <textarea placeholder="Please share your project goals, requirements, or any question you have. We will get back to you as soon as possible"  id="message" required></textarea>
+            </div>
+
+            <button type="button" class="contact-btn" onclick="sendEmail()">SEND MESSAGE</button>
+        </form>
+    </div>
+
+     </section>
+
+
+     
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+    <script>
+        AOS.init();
+     </script>
+
+    
+</body>
+</html>

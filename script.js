@@ -1,3 +1,7 @@
+emailjs.init({
+            publicKey: '6upSXP_XXdZIVKN27',
+    });
+
 const texts = [
     "BUILD YOUR DREAM HOUSE WITH US",
     "QUALITY CONSTRUCTION YOU CAN TRUST",
@@ -91,36 +95,41 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(counterSection);
 
 
+   
 
+function sendEmail(){ 
+    
+        let fname = document.getElementById("firstname").value.trim();
+        let lname = document.getElementById("lastname").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let number = document.getElementById("number").value.trim();
+        let bhk_group = document.querySelector('input[name="bhk"]:checked')?.value || " ";
+        let project = document.getElementById("project").value;
+        let message = document.getElementById("message").value.trim();
 
-// function sendEmail(){
-//     emailjs.init({
-//         publicKey: 'YOUR_PUBLIC_KEY',
-//     });
+        let params = {
+            first_name: fname,
+            last_name: lname,
+            from_email: email,
+            from_number: number,
+            from_bhk:bhk_group,
+            from_project:project,
+            message: message
+        }
 
-//     let username = document.getElementById("username").value.trim();
-//     let email = document.getElementById("email").value.trim();
-//     let number = document.getElementById("number").value.trim();
-//     let project = document.getElementById("project").value.trim();
-//     let message = document.getElementById("message").value.trim();
+        console.log(params)
 
-//     let params = {
-//         from_name: uname,
-//         from_email: email,
-//         from_number: number,
-//         from_project:project,
-//         message: message
-//     }
-
-//     emailjs
-//     .sendForm('services_id', 'template_id', params)
-//     .then(function(){
-//         alert('Email Successfully Submitted ✅')
-//     })
-//     .catch(function(){
-//         alert("Email not can send!")
-//     })
-// }
+    emailjs
+    .send('service_f234mci', 'template_43z54fb', params)
+    .then(()=>{
+        alert('Email Successfully Submitted ✅')
+        document.getElementById("form").reset();    
+    })
+    .catch(()=>{
+        alert("Email can not send!")
+    })
+   
+}
 
 
 
