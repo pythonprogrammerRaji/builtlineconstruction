@@ -95,8 +95,6 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(counterSection);
 
 
-   
-
 function sendEmail(){ 
     
         let fname = document.getElementById("firstname").value.trim();
@@ -116,8 +114,6 @@ function sendEmail(){
             from_project:project,
             message: message
         }
-
-        console.log(params)
 
     emailjs
     .send('service_f234mci', 'template_43z54fb', params)
