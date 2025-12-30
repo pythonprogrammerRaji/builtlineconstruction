@@ -346,10 +346,6 @@
         display: flex;
         height: fit-content;
     }
-    
-     /* .counter-box{
-        width: 100%;
-    }  */
 
 }
 
@@ -575,10 +571,5 @@
         font-size: 1.2vw;
         max-width: 600px;
     }
-
-
-
-
-
 
 }

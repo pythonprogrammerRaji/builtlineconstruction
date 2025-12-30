@@ -201,16 +201,7 @@ nav button a:hover{
     text-align: center;
     color: #fff;
 }
-/* .about-section h1::after{
-    content: " ";
-    background-color: darkgoldenrod;
-    width: 90px;
-    height: 4px;
-    position: absolute;
-    top: 40px;
-    left: 540px;
-    border-radius: 5px;
-} */
+
 .about-content{
     display: flex;
     align-items: center;
