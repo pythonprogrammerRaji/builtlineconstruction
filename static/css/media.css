@@ -324,7 +324,7 @@
 
 }
 
-@media (min-width: 901px) and (max-width: 1300px){
+@media (min-width: 901px) and (max-width: 1200px){
     .section-container{
         max-width: 1400px;
         margin: 0 auto;
@@ -348,54 +348,6 @@
     }
 
 }
-
-@media screen and (max-width: 2499){
-
-    .hero-content{
-       
-        width: 1200px;
-        position: relative;
-    
-    }
-    .hero-content h1{
-        font-size: 8rem;
-    }
-    .hero-content::before{
-        position: absolute;
-        top: -100px;
-        width: 500px;
-    }
-    .about-content{
-        height: auto;
-        max-width: auto;
-        width: 100%;
-        display: flex;
-        /* flex-wrap: wrap; */
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-    }
-    .aboutText p{
-        font-size: 2rem;
-        width: 1000px;
-
-    }
-    .about-image{
-       width: 1000px;
-       position: relative;
-    }
-    .about-image img{
-        width: 100%;
-        position: absolute;
-        left: 1300px;
-        top:-900px;
-        height: 800px;
-    }
-    .about-section h1{
-        font-size: 4rem;
-    }
-}
-
 @media screen and (min-width: 2000px){
     .section-container{
         width: 150%;
