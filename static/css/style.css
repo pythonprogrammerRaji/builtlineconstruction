@@ -64,10 +64,10 @@ nav{
     position: fixed;
     left: 700px;
 }
-nav.shownav{
-    position: relative;
+/* nav.shownav{
+    position: fixed;
     left: 0px;
-}
+} */
 
 nav a{
     padding: 14px;
@@ -361,7 +361,7 @@ nav button a:hover{
 }
 .contact-content{
      max-width: 800px;
-     margin-top: 30px;
+     margin-top: 80px;
      margin-bottom: 40px;
     
 }

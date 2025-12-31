@@ -20,7 +20,7 @@ window.addEventListener('load',()=>{
     const hero = document.querySelector(".hero");
     const text = document.querySelector(".hero-content");
     const image = document.querySelector(".Image");
-    const nav = document.querySelector("nav")
+    // const nav = document.querySelector("nav")
 
     setTimeout(() => {
         hero.classList.add("show-bg");
@@ -33,7 +33,7 @@ window.addEventListener('load',()=>{
      setTimeout(() => {
         image.classList.add("showImage")
         image.style.display = "block"
-        nav.classList.add("shownav")
+        // nav.classList.add("shownav")
      },4000);
 })
 
