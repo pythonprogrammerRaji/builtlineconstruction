@@ -127,6 +127,26 @@ function sendEmail(){
    
 }
 
+index = 0;
+
+
+function slide(direction) {
+  const track = document.getElementById("expertTrack");
+  const card = track.children[0];
+  const gap = 20;
+
+  const cardWidth = card.offsetWidth + gap;
+  const totalCards = track.children.length;
+  const visibleCards = 3;
+  const maxIndex = totalCards - visibleCards;
+
+  index += direction;
+
+  if (index < 0) index = 0;
+  if (index > maxIndex) index = maxIndex;
+
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
 
 
 
