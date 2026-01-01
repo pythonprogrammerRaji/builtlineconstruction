@@ -326,7 +326,10 @@
     .flip-card{
         width: 305px;
     }
-    
+    .expertise-cards {
+    flex-direction: column;
+    }
+
 
 }
 
