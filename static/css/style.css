@@ -688,11 +688,7 @@ textarea{
 .carousel::-webkit-scrollbar{
     display: none;
 }
-/* .slider{
-    display: flex;
-    width: max-content;
-    animation: spin 18s linear infinite;
-} */
+
 .group{
     display: flex;
     align-items: center;
