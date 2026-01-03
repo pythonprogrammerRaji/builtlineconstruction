@@ -62,7 +62,7 @@ nav{
     margin-top: 30px;
     z-index: 3;
     position: fixed;
-    left: 700px;
+    left: 600px;
 }
 /* nav.shownav{
     position: fixed;
@@ -300,14 +300,18 @@ nav button a:hover{
 .footer-image h2{
     display: inline;
     font-size: 18px;
+    color: #000;
 }
 .footer-box h4{
     font-size: 15px;
     margin-top: 20px;
+      color: #000;
+    
     
 }
 .footer-box h3{
     position: relative;
+    color: #000;
 }
 .footer-box p{
     font-size: 15px;
@@ -679,7 +683,7 @@ textarea{
 }
 /* carousel */
 .carousel{
-    margin: 40px 100px;
+    margin: 10px 100px;
     width: 80%;
     padding: 20px 10%;
     overflow-x: auto;
@@ -783,29 +787,18 @@ textarea{
     align-items: center;
     justify-content: center;
     position: relative;
-    left: 70px;
+    left: 80px;
     top: 10px;
-    z-index: -3px;
      
 
 }
-/* .template-image::before{
-    content: "";
-    width: 180px;
-    height: 180px;
-    background-color: rgb(173, 132, 27, 0.5);
-    position: absolute;
-    border-radius: 100%;
-    
-} */
+
 .template-image img{
     width: 100%;
     height: 100%;
     margin: 20px;
     text-align: start;
     color: darkgoldenrod;
-
-
 
 }
 
