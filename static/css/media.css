@@ -183,6 +183,9 @@
     .flip-card{
         width: 330px;
     }
+    .template-box{
+        flex-wrap: wrap;
+    }
    
 }
 /* tables */
@@ -329,6 +332,10 @@
     .expertise-cards {
     flex-direction: column;
     }
+     .template-box{
+        flex-wrap: wrap;
+    }
+   
 
 
 }
@@ -383,6 +390,10 @@
        top: 40px; */
        height: 280px;
     }
+     .template-box{
+        flex-wrap: wrap;
+    }
+   
 
 }
 @media (min-width:1400px) and (max-width: 2700px){
@@ -398,12 +409,12 @@
         height: 400px;
     }
     nav{
-        width: 80rem;
+        width: 82rem;
         /* border-radius: 100%; */
     }
     nav a{
         font-size: 2rem;
-        padding: 50px 30px;
+        padding: 60px 30px;
         cursor: pointer;
     }
     nav a:hover{
@@ -560,5 +571,40 @@
         font-size: 1.2vw;
         max-width: 600px;
     }
-
+    .carousel{
+        margin: 40px 300px;
+        width: 80%;
+        padding: 20px 10%;
+        overflow-x: auto;
+        /* margin-right: 190px; */
+        
+       
+    }
+    .group{
+        width: calc(6 * 300px + 40px);
+        animation: spin 5s linear infinite;
+        margin-top: 80px;
+    }
+    .card{
+        height: 17em;
+        width: max-content;
+    }
+    .card img{
+        width: 230px;
+    }
+    @keyframes spin{
+        0% {
+            translate: 0;
+        }
+        100%{
+            translate: -30%;
+    }
+    }
+    .template-container{
+        width: 100%;
+        padding: 20px 0%;
+    }
+    .template-box{
+        width: 100%;
+    }
 }
