@@ -41,12 +41,13 @@ header{
    
 }
 header img{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin-top: 150px;
     margin-left: 20px;
     z-index: 4;
     display: none;
+    border-radius: 20%;
 }
 header img.showImage{
     transform: scaleX(0.9);
@@ -131,7 +132,7 @@ nav button a:hover{
 .hero-content{
     position: relative;
     left: -90px;
-    width: 700px;
+    width: 900px;
     text-align: start; 
     transform: translateX(-150%);
     z-index: -4;
@@ -151,6 +152,7 @@ nav button a:hover{
     font-size: 40px;
     animation: slideText 1s ease;
     min-height: 100px;
+    margin-bottom: -20px;
 }
 
 .hero-content.show-text {
@@ -604,12 +606,12 @@ textarea{
   
 }
 .arrow {
-  background: #fff;
+  background: transparent;
   border: none;
   font-size: 24px;
   cursor: pointer;
   padding: 10px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 
@@ -699,7 +701,7 @@ textarea{
     justify-content: center;
     gap: 60px;
     height: 200px;
-    width: calc(7 * 290px + 40px);
+    width: calc(3 * 290px + 40px);
     animation: spin 9s infinite linear;
     margin-top: 20px;
 
@@ -789,9 +791,25 @@ textarea{
     position: relative;
     left: 80px;
     top: 10px;
+    
      
 
 }
+.image2{
+    width: 250px;
+    height: 220px;
+    position: relative;
+    top: -30px;
+    left: 20px;
+    /* margin-top: -40px;
+    margin-left: -50px; */
+    
+}
+.process-test{
+    position: relative;
+    top: -70px;
+}
+
 
 .template-image img{
     width: 100%;
@@ -799,7 +817,6 @@ textarea{
     margin: 20px;
     text-align: start;
     color: darkgoldenrod;
-
 }
 
 

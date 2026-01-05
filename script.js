@@ -5,7 +5,11 @@ emailjs.init({
 const texts = [
     "BUILD YOUR DREAM HOUSE WITH US",
     "QUALITY CONSTRUCTION YOU CAN TRUST",
-    "WE SHAPE YOUR FUTURE BUILDINGS"
+    "WE SHAPE YOUR FUTURE BUILDINGS",
+    "TRUSTED BY CLIENTS, PROVEN BY PROJECTS",
+    "BUILT ON TRUST AND QUALITY",
+    "RELIABLE CONSTRUCTION, PROVEN RESULTS",
+    "YOUR TRUSTED CONSTRUCTION PARTNER"
 ];
     let index = 0;
     const heroText = document.getElementById("heroText");
@@ -137,8 +141,9 @@ function slide(direction) {
 
   const cardWidth = card.offsetWidth + gap;
   const totalCards = track.children.length;
-  const visibleCards = 3;
+  const visibleCards = 1;
   const maxIndex = totalCards - visibleCards;
+  cardWidth + gap
 
   index += direction;
 
@@ -147,6 +152,8 @@ function slide(direction) {
 
   track.style.transform = `translateX(-${index * cardWidth}px)`;
 }
+
+
 
 
 

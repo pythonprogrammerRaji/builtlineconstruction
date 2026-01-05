@@ -393,11 +393,7 @@
      .template-box{
         flex-wrap: wrap;
     }
-   
-
 }
-
-
 
 @media (min-width:1400px) and (max-width: 2700px){
     .section-container{
