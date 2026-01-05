@@ -5,26 +5,6 @@
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
 } 
-/* 
-.header-class{
-    width: 100%;
-    height: 10px;
-    padding: 20px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: darkgoldenrod;
-}
-.sub-class{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; 
-}
-.sub-class i{
-    color: white;
-    font-size: 30px;
-} */
 
 .section-container{
     width: 100%;
@@ -41,8 +21,8 @@ header{
    
 }
 header img{
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 150px;
     margin-top: 150px;
     margin-left: 20px;
     z-index: 4;
@@ -273,21 +253,23 @@ nav button a:hover{
 .footer-container{
     width: 100%;
     background-color: darkgoldenrod;
-     display: flex;
-    align-items: center;
+    display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 20px 7%;
     gap: 60px;
+    height: 500px;
     
 }
+
 .footer-box{
     width: 200px;
     height: 300px;
     color: white;
 }
 .footer-image{
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -297,6 +279,7 @@ nav button a:hover{
     width: 100%;
     background-color: #fff;
     border-radius: 50px;
+
 
 }
 .footer-image h2{
@@ -318,6 +301,7 @@ nav button a:hover{
 .footer-box p{
     font-size: 15px;
     padding: 10px;
+    cursor: pointer;
 }
 .icons {
     display: flex;
@@ -357,6 +341,14 @@ nav button a:hover{
     text-decoration: none;
     color: #fff;
     position: relative;
+}
+.important-links a{
+    text-decoration: none;
+    color: #fff;
+}
+.contact-footer{
+    position: relative;
+    left: -80px;
 }
 
 
@@ -695,26 +687,25 @@ textarea{
     display: none;
 }
 
-.group{
+/* .group{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 60px;
     height: 200px;
     width: calc(3 * 290px + 40px);
-    animation: spin 9s infinite linear;
+    animation: spin 25s infinite linear;
     margin-top: 20px;
 
-}
+} */
 .card{
-    flex: 0 0 auto;
     /* width: max-content; */
     height: 8em;
 }
-.card:hover{
+/* .card:hover{
    transform: scale(1.3);
    transition: 2s;
-}
+} */
 .card img{
     width: 140px;
     height: 100%;
@@ -843,4 +834,160 @@ textarea{
      justify-content: center;
      padding: 10px;
 
+}
+
+/* copyright */
+.copyright{
+    text-align: center;
+    background-color:#000;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* scroll-btn */
+.scroll-btn{
+    width: 0;
+    height: 0;
+}
+.scroll-btn i{
+    position: fixed;
+    right: 21px;
+    top: 520px;
+    bottom: 10px;
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: darkgoldenrod;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #fff;
+}
+
+ .scrollContainer {
+        width: 80%;
+        margin: 40px auto;
+        overflow-x: hidden;
+ }
+
+    /* stop animation on hover */
+    /* .scrollContainer:hover .scrollWrapper {
+        animation-play-state: paused;
+    } */
+
+.scrollContainer .scrollWrapper {
+    display: flex;
+    gap: 70px;
+    animation: scrollAnim 25s infinite linear;
+    width: max-content;
+}
+.scrollContainer .scrollWrapper .item {
+    width: 70px;
+    height: 70px;
+    background-color: aquamarine;
+    font-size: clamp(2rem, 4vw, 4rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: 200ms ease-in-out;
+}
+.scrollWrapper img{
+    width: 150px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.scrollContainer .scrollWrapper .item:hover{
+    background-color: rgb(110, 236, 194);
+    cursor: pointer;
+}
+
+@keyframes scrollAnim {
+    to {
+            transform: translateX(calc(-50% - 0.5rem));
+        }
+}
+
+/* testimonials */
+.subtitle-1{
+    text-align: center;
+    color: gray;
+    margin-top: 20px;
+}
+.testimonials{
+    /* width: 100%;  */
+    padding: 20px 8%;
+    height: 600px;
+    height: fit-content;
+    
+}
+
+.testimonials-container{
+    width: 100%;
+    overflow-x: hidden;
+}
+ /* stop animation on hover */
+.testimonials-container:hover .testimonials-wrapper {
+    animation-play-state: paused;
+   
+}
+.testimonials-wrapper{
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scrollAnim 25s infinite linear;
+    margin: 40px 80px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: 200ms ease-in-out;
+}
+.testimonials-cards{
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+.testimonials-cards:hover{
+     transform: scale(1.1);
+    transition: 1s;
+}
+
+.testimonials-cards img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin-top: -50px;
+
+}
+.testimonials-cards h1{
+    font-size: 20px;
+    margin: 15px;
+}
+.role{
+    font-size: 17px;
+    color: gray;
+    margin-bottom: 10px;
+}
+.stars i{
+    color: darkgoldenrod;
+    font-size: 20px;
+}
+.review{
+    text-align: center;
+    font-size: 17px;
+    margin-top: 10px;
+    color: gray;
 }

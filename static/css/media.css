@@ -153,6 +153,10 @@
         height: auto;
         width: 100%;
     }
+    .contact-footer{
+        position: relative;
+        left: 0px;
+}
     .icons{
         display: flex;
         flex-wrap: wrap;
@@ -185,6 +189,23 @@
     }
     .template-box{
         flex-wrap: wrap;
+    }
+     .testimonials-wrapper{
+        flex-wrap: wrap;
+    }
+    .testimonials-cards{
+        width: 400px;
+    }
+    /* scroll */
+    .scroll-btn{
+        width: 0;
+        height: 0;
+    }
+    .scroll-btn i{
+        position: fixed;
+        right: 0px;
+        top: 380px;
+        bottom: 0px;
     }
    
 }
@@ -335,6 +356,19 @@
      .template-box{
         flex-wrap: wrap;
     }
+
+    .scroll-btn{
+        width: 0;
+        height: 0;
+    }
+    .scroll-btn i{
+        position: fixed;
+        right: 0px;
+        top: 380px;
+        bottom: 0px;
+    }
+   
+    
    
 
 
@@ -393,6 +427,21 @@
      .template-box{
         flex-wrap: wrap;
     }
+    /* scroll */ 
+    .scroll-btn{
+        width: 0;
+        height: 0;
+    }
+    .scroll-btn i{
+        position: fixed;
+        right: 0px;
+        top: 380px;
+        bottom: 0px;
+    }
+    .footer-container{
+        height:500px;
+    }
+   
 }
 
 @media (min-width:1400px) and (max-width: 2700px){
@@ -605,5 +654,24 @@
     }
     .template-box{
         width: 100%;
+    }
+     .scroll-btn{
+        width: 0;
+        height: 0;
+    }
+    .scroll-btn i{
+        position: fixed;
+        right: 0px;
+        top: 900px;
+        bottom: 0px;
+    }
+    .footer-container{
+        height: 700px;
+    }
+    .testimonials-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
     }
 }

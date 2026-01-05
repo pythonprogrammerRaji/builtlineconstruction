@@ -153,7 +153,40 @@ function slide(direction) {
   track.style.transform = `translateX(-${index * cardWidth}px)`;
 }
 
+// copyright
 
+document.getElementById("year").textContent = new Date().getFullYear();
+
+
+// Select the scroll button
+const scrollBtn = document.querySelector(".scroll-btn");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 200) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+});
+
+
+scrollBtn.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+//////////////////////
+
+const scrollWrapper = document.querySelector('.scrollWrapper');
+        const items = [...scrollWrapper.children];
+
+        items.forEach((item) => {
+            const clonedItem = item.cloneNode(true);
+            // clonedItem.classList.add("red");
+            scrollWrapper.appendChild(clonedItem);
+        })
 
 
 
