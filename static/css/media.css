@@ -207,7 +207,47 @@
         top: 380px;
         bottom: 0px;
     }
-   
+    /* get in quote */
+    .package-wrapper{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .package-card{
+        width: 350px;
+        
+    }
+    .package-card a{
+        position: relative;
+        left: -20px;
+        width: 100%;
+    }
+    .compare-box{
+        width: 100px;
+    }
+    .compare-card{
+        flex-wrap: wrap;
+    }
+    .list{
+        margin-top: 30px;
+       
+    }
+    .list p{
+         height: 600px;
+        width: 20px;
+        font-size: 12px;
+    }
+    .list h3{
+        text-align: start;
+        font-size: 15px;
+    }
+    /* calculation */
+    .plot-input input{
+        width: 100%;
+    }
+    .navbar button{
+        width: 300px;
+        padding: 0px;
+    }
 }
 /* tables */
 @media (min-width: 601px) and (max-width: 900px) {
@@ -304,7 +344,11 @@
     .counter-box h2{
         margin-top: 30px;
         font-size: 80px;
-    }   
+    }  
+    .contact-footer{
+        position: relative;
+        left: -15px;
+    } 
     .footer-container{
         width: 100%;
         flex-wrap: wrap;
@@ -343,7 +387,7 @@
         flex-wrap: wrap;
     }
 
-     .expertise-viewpoint{
+    .expertise-viewpoint{
         overflow: hidden;
         width: calc(2 * 300px + 40px);
     }
@@ -367,9 +411,11 @@
         top: 380px;
         bottom: 0px;
     }
-   
+    /* get a quote */
     
-   
+    .package-wrapper{
+        flex-wrap: wrap;
+    }
 
 
 }
@@ -440,6 +486,11 @@
     }
     .footer-container{
         height:500px;
+    }
+      /* get a quote */
+    
+    .package-wrapper{
+        flex-wrap: wrap;
     }
    
 }

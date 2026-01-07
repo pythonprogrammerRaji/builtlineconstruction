@@ -15,7 +15,7 @@ const texts = [
     const heroText = document.getElementById("heroText");
 setInterval(() => {
     index = (index + 1) % texts.length; 
-    heroText.textContent = texts[index];
+    heroText.innerText = texts[index];
 }, 3000);
 
 
@@ -186,7 +186,92 @@ const scrollWrapper = document.querySelector('.scrollWrapper');
             const clonedItem = item.cloneNode(true);
             // clonedItem.classList.add("red");
             scrollWrapper.appendChild(clonedItem);
-        })
+})
+
+// calculation
+
+let totalArea = 0;
+const reduction = 150; 
+let reductionApplied = false;
+
+const lengthInput = document.getElementById("length");
+const widthInput = document.getElementById("width");
+
+    // Automatic area calculation
+lengthInput.addEventListener("input", calculateTotalArea);
+widthInput.addEventListener("input", calculateTotalArea);
+
+function calculateTotalArea() {
+    const length = parseInt(lengthInput.value) || 0;
+    const width = parseInt(widthInput.value) || 0;
+    totalArea = length * width;
+    document.getElementById("totalAreaInput").value = totalArea;
+    reductionApplied = false;
+    updateCosts();
+}
+
+    // Navbar buttons logic
+    const floorButtons = document.querySelectorAll(".floor-btn");
+    floorButtons.forEach(btn => {
+        btn.addEventListener("click", function(){
+            floorButtons.forEach(b => b.classList.remove("active"));
+            this.classList.add("active");
+            showFloors(parseInt(this.dataset.floor));
+        });
+    });
+
+    function showFloors(selectedFloor) {
+        for(let i=0;i<4;i++){
+            const card = document.getElementById("floor"+i);
+            card.style.display = i <= selectedFloor ? "block" : "none";
+        }
+        updateCosts();
+    }
+
+    function updateCosts() {
+        let totalBefore = 0;
+        let totalAfter = 0;
+
+        for(let i=0;i<4;i++){
+            const card = document.getElementById("floor"+i);
+            if(card.style.display === "block"){
+                const select = card.querySelector("select");
+                let rate = parseInt(select.value);
+
+                // Show informational popup once
+                if(i>0 && totalArea >=1200 && !reductionApplied){
+                    alert("Total area ≥ 1200 sq.ft. ₹150 per sq.ft will be reduced automatically for eligible floors (Ground floor excluded).");
+                    reductionApplied = true;
+                }
+
+               const costBefore = totalArea * rate;
+                let effectiveArea = totalArea;
+
+                // Apply area reduction only for upper floors & only once
+                if (i > 0 && totalArea >= 1200 && reductionApplied) {
+                    effectiveArea = totalArea - reduction; // 1200 → 1050
+                }
+
+                const costAfter = effectiveArea * rate;
+
+
+                card.querySelector(".costBefore").innerText = costBefore.toLocaleString();
+                card.querySelector(".costAfter").innerText = costAfter.toLocaleString();
+
+                totalBefore += costBefore;
+                totalAfter += costAfter;
+            }
+        }
+
+        document.getElementById("totalBefore").innerText = totalBefore.toLocaleString();
+        document.getElementById("totalAfter").innerText = totalAfter.toLocaleString();
+        document.getElementById("savingCost").innerText = (totalBefore - totalAfter).toLocaleString();
+    }
+
+    // Initialize default
+    calculateTotalArea();
+    showFloors(0);
+
 
 
 
