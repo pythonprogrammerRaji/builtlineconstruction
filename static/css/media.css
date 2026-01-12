@@ -442,7 +442,7 @@
 
 }
 
-@media (min-width: 901px) and (max-width: 1400px){
+@media (min-width: 901px) and (max-width: 1200px){
     .section-container{
         max-width: 100%;
         width: 100%;
@@ -528,10 +528,10 @@
    
 }
 
-@media (min-width:1400px) and (max-width: 3000px){
+@media (min-width:1400px) and (max-width:10000px){
     .section-container{
         width: 100%;
-        max-width: 5000px;
+        max-width: 3000px;
     }
     header{
         height: 200px;
@@ -540,19 +540,16 @@
         width: 400px;
         height: 400px;
     }
-     nav{
-        /* width: 80rem;
-        padding: 1rem;
-        
-         */
+    nav{
         flex-wrap: wrap;
         position: fixed;
-        right: 0;
+        left: 30%;
         z-index: 22;
+        padding: 20px 10px;
     }
     nav a{
         font-size: 2rem;
-        padding: 60px 30px;
+        padding: 60px 40px;
         cursor: pointer;
     }
     nav a:hover{
@@ -570,10 +567,9 @@
     }
     .hero-content::before{
         position: absolute;
-        top: -560px;
-        height: 200vh;
+        top: -500%;
+        height: 220vh;
         width: 80vw;
-        left: -100px;
     }
     .hero-content p{
         font-size: 3rem;
