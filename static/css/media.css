@@ -237,10 +237,12 @@
      .projectImage img {
         width: 100%;
     }
+    .project-wrapper{
+         flex-direction: column;
+          flex-wrap: wrap;
+    }
     .project-card{
         width: 100%;
-        flex-wrap: wrap;
-        flex-direction: column;
         height: fit-content;
     }
     /* map */
@@ -250,7 +252,24 @@
     .project-iframe iframe{ 
         width: 100%;
         
+       
     }   
+    /* team */
+    .team-wrapper{
+        flex-direction: column;
+    }
+    .team-card{
+        width: 100%;
+        
+    }
+    /* youtube play */
+    .video-card {
+        width: fit-content;
+    }
+    /* copyright */
+    .copyright{
+        height: fit-content;
+    }
 }
 /* tables */
 @media (min-width: 601px) and (max-width: 900px) {

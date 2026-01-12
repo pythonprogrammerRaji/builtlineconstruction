@@ -962,7 +962,7 @@
     </div>
 
     <!-- youtube -->
-     <!-- <div class="youtube">
+     <div class="youtube">
 
          <div class="expertise-header">
             <center>
@@ -974,32 +974,32 @@
         <div class="video-slider">
             <div class="video-track">
 
-            <div class="video-card" data-video="https://youtu.be/0R89l-REln0?si=JBWM0vbRkSAMeOvl">
+            <div class="video-card" data-video="0R89l-REln0">
                 <img src="https://img.youtube.com/vi/0R89l-REln0/maxresdefault.jpg">
                 <span class="play-btn">▶</span>
             </div>
 
-            <div class="video-card" data-video="https://youtu.be/mQzt32HaYl8?si=mQ1lYTD7CqtSnpgm">
+            <div class="video-card" data-video="mQzt32HaYl8">
                 <img src="https://img.youtube.com/vi/mQzt32HaYl8/maxresdefault.jpg">
                 <span class="play-btn">▶</span>
             </div>
 
-            <div class="video-card" data-video="https://youtu.be/dsegx9tf3aw?si=_ngtR1EODVs-lZo1">
+            <div class="video-card" data-video="dsegx9tf3aw">
                 <img src="https://img.youtube.com/vi/dsegx9tf3aw/maxresdefault.jpg">
                 <span class="play-btn">▶</span>
             </div>
 
-            <div class="video-card" data-video="https://youtu.be/0R89l-REln0?si=JBWM0vbRkSAMeOvl">
+            <div class="video-card" data-video="0R89l-REln0">
                 <img src="https://img.youtube.com/vi/0R89l-REln0/maxresdefault.jpg">
                 <span class="play-btn">▶</span>
             </div>
 
-            <div class="video-card" data-video="https://youtu.be/mQzt32HaYl8?si=mQ1lYTD7CqtSnpgm">
+            <div class="video-card" data-video="mQzt32HaYl8">
                 <img src="https://img.youtube.com/vi/mQzt32HaYl8/maxresdefault.jpg">
                 <span class="play-btn">▶</span>
             </div>
 
-            <div class="video-card" data-video="https://youtu.be/dsegx9tf3aw?si=_ngtR1EODVs-lZo1">
+            <div class="video-card" data-video="dsegx9tf3aw">
                 <img src="https://img.youtube.com/vi/dsegx9tf3aw/maxresdefault.jpg">
                 <span class="play-btn">▶</span>
             </div>
@@ -1007,13 +1007,12 @@
             </div>
         </div>  
 
-        Video Popup
         <div class="video-popup" id="videoPopup">
             <span class="close-btn" onclick="closeVideo()">✕</span>
-            <iframe id="videoFrame" allowfullscreen></iframe>
+            <iframe id="videoFrame" width="600" height="350" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
         </div>
-
-    </div> -->
+    </div>
 
 
     <!-- footers -->
@@ -1051,9 +1050,9 @@
             </div>
             <a href="#home"><span>HOME</span></a>
             <a href="#about">ABOUT</a>
-            <a href="#services">SERVICE</a>
-            <a href="#project">PROJECTS</a>
-            <a href="#">BLOGS</a>
+            <a href="services.html">SERVICE</a>
+            <a href="project.html">PROJECTS</a>
+            <a href="#blogs">BLOGS</a>
             <a href="#services">CAREERS</a>
             <a href="#project">PACKAGES</a>
             <a href="contact.html">CONTACT</a>
@@ -1098,34 +1097,27 @@
 
     </section>
 
-
-
-
     <script src="script.js"></script>
-
     <script>
-        // youtubes play
+        const cards = document.querySelectorAll('.video-card');
+        const popup = document.getElementById('videoPopup');
+        const iframe = document.getElementById('videoFrame');
 
-    const cards = document.querySelectorAll('.video-card');
-    const popup = document.getElementById('videoPopup');
-    const frame = document.getElementById('videoFrame');
-    const track = document.querySelector('.video-track');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const videoId = card.getAttribute('data-video');
 
-    /* Play Video */
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            track.style.animationPlayState = 'paused';
-            popup.style.display = 'flex';
-            frame.src = card.dataset.video + "?autoplay=1";
+                // IMPORTANT: change iframe src every time
+                iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
+
+                popup.style.display = 'flex';
+            });
         });
-    });
 
-    /* Close Video */
-    function closeVideo() {
-    popup.style.display = 'none';
-    frame.src = "";
-    track.style.animationPlayState = 'running';
-}
+        function closeVideo() {
+            iframe.src = "";   // stop previous video
+            popup.style.display = 'none';
+        }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
