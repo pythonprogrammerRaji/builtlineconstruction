@@ -77,48 +77,33 @@
         font-size: 18px;
         margin-top: -40px;
     }
-
     .about-section{
-        height: auto !important;
-        top: -50px;
-        margin:10px;
-        flex-direction: column;
-        flex-wrap: wrap;
-        display: flex;
-        height: 100%;
-        position: relative;
-        padding: 20px;
-        min-height: 1000px;
-        
+        height: fit-content;
+        padding: 5px;
     }
     .about-content{
-        flex-basis: 200px;
-        padding: 5px;
-        flex-grow: 1;
-        max-width: 1200px;
-        width: 100%;
-        flex-wrap: wrap;  
         height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
         
     }
-    .about-section h1{
-        text-align: center;
-    }
-    
-    .aboutText p{
-        flex-wrap: wrap;
-        height: 100%;
+    .aboutText{
+        flex-grow: 1;
+        flex-basis: 200;
         width: 100%;
-     }
+       
+    }
     .about-image{
-        height: 300px;
-        width: auto;
-        display: block;
-    }
-    
-    .about-image img{
         width: 100%;
+    }
+    .counter-container{
         flex-wrap: wrap;
+        height: fit-content;
+        display: flex;
+        padding: 0px 10px;
+         /* margin-top: 40px; */
+
     }
     .content-box{
         width: 100%;
@@ -189,6 +174,7 @@
     }
     .template-box{
         flex-wrap: wrap;
+        flex-direction: column;
     }
      .testimonials-wrapper{
         flex-wrap: wrap;
@@ -248,6 +234,23 @@
         width: 300px;
         padding: 0px;
     }
+     .projectImage img {
+        width: 100%;
+    }
+    .project-card{
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: fit-content;
+    }
+    /* map */
+    .project-iframe{
+         margin: 10px;
+    }
+    .project-iframe iframe{ 
+        width: 100%;
+        
+    }   
 }
 /* tables */
 @media (min-width: 601px) and (max-width: 900px) {
@@ -416,11 +419,30 @@
     .package-wrapper{
         flex-wrap: wrap;
     }
-
+    .projectImage{
+        flex-wrap: wrap;
+        height: fit-content;
+        width: fit-content;
+    }
+    .projectImage img{
+        width: calc((100% - 10px) / 2); 
+    }
+     .project-wrapper{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0px;
+    }
+    .project-card{
+        width: 40%;
+    }
+    .counter-heading{
+    height: 40vh;
+}
 
 }
 
-@media (min-width: 901px) and (max-width: 1200px){
+@media (min-width: 901px) and (max-width: 1400px){
     .section-container{
         max-width: 100%;
         width: 100%;
@@ -442,13 +464,14 @@
        width: 100%;
        height: 100vh;
        flex-wrap: wrap;
-       flex-direction: row;
-    }.aboutText{
-        width: 400px;
+
+    }
+    .aboutText{
         padding: 0px;
+        width: 50%;
     }
     .about-image {
-        width: 400px;
+        
         height: 400px;
     }
     .about-image img{
@@ -492,13 +515,23 @@
     .package-wrapper{
         flex-wrap: wrap;
     }
+     .projectImage{
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+     .project-card{
+        flex-wrap: wrap;
+        width: 47%;
+        flex-direction: row;
+        gap: 0px;
+    }
    
 }
 
-@media (min-width:1400px) and (max-width: 2700px){
+@media (min-width:1400px) and (max-width: 3000px){
     .section-container{
-        width: 150%;
-        max-width: 3000px;
+        width: 100%;
+        max-width: 5000px;
     }
     header{
         height: 200px;
@@ -507,9 +540,15 @@
         width: 400px;
         height: 400px;
     }
-    nav{
-        width: 82rem;
-        /* border-radius: 100%; */
+     nav{
+        /* width: 80rem;
+        padding: 1rem;
+        
+         */
+        flex-wrap: wrap;
+        position: fixed;
+        right: 0;
+        z-index: 22;
     }
     nav a{
         font-size: 2rem;
@@ -519,34 +558,40 @@
     nav a:hover{
         color: darkgoldenrod;
         transition: all 0.8s ease;
-    }
+    } */
     .hero-content{
-        width: 1200px;
+        width: 200%;
         position: relative;
+        margin: 0;
     }
     .hero-content h1{
         font-size: 5rem;
+        width: 70vw;
     }
     .hero-content::before{
         position: absolute;
-        top: -90px;
+        top: -560px;
+        height: 200vh;
+        width: 80vw;
+        left: -100px;
     }
     .hero-content p{
         font-size: 3rem;
+        width: 70vw;
     }
     .btn{
         font-size: 2rem;
     }
     .about-section{
-        height: 1000px;
-        /* width: 100%; */
+        height: fit-content;
+        flex-wrap: wrap;  
     }
     .about-content{
         height: auto;
         max-width: auto;
         width: 100%;
         display: flex;
-        /* flex-wrap: wrap; */
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
@@ -557,15 +602,14 @@
 
     }
     .about-image{
-       width: 1000px;
+       width: 100%;
        position: relative;
+       z-index: 2;
     }
     .about-image img{
         width: 100%;
-        position: absolute;
-        left: 1300px;
-        top:-900px;
         height: 800px;
+        z-index: 0;
     }
     .about-section h1{
         font-size: 4rem;
@@ -675,7 +719,6 @@
         width: 80%;
         padding: 20px 10%;
         overflow-x: auto;
-        /* margin-right: 190px; */
         
        
     }
@@ -697,11 +740,16 @@
         }
         100%{
             translate: -30%;
+        }
     }
-    }
-    .template-container{
+
+   .template-container{
         width: 100%;
-        padding: 20px 0%;
+        padding: 20px 7%;
+    }
+    .expertise-container{
+        margin: 0;
+        padding: 0;
     }
     .template-box{
         width: 100%;
@@ -725,4 +773,9 @@
         justify-content: center;
         width: 80%;
     }
+     .projectImage{
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    
 }

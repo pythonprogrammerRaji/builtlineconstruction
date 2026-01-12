@@ -42,29 +42,6 @@ window.addEventListener('load',()=>{
 })
 
 
-// let counters = document.querySelectorAll(".count");
-
-// let done = false;
-
-// window.addEventListener('scroll', ()=>{
-//     if(done) return
-
-//     counters.forEach(counter =>{
-//         let target = +counter.dataset.target;
-//         let count = 0
-
-//         let interval = setInterval(()=>{
-//             counter.innerText = ++count + '+';
-//             if(count == target){
-//                 clearInterval(interval);
-//             }
-//         }, 30)
-//     })
-
-//     done = true;
-
-// })
-
 let counters = document.querySelectorAll(".count");
 const counterSection = document.querySelector("#counter");
 
@@ -177,7 +154,7 @@ scrollBtn.addEventListener("click", function () {
     });
 });
 
-//////////////////////
+// scroll up homepage button js code
 
 const scrollWrapper = document.querySelector('.scrollWrapper');
         const items = [...scrollWrapper.children];
@@ -271,6 +248,8 @@ function calculateTotalArea() {
     // Initialize default
     calculateTotalArea();
     showFloors(0);
+
+
 
 
 
