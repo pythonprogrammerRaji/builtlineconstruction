@@ -31,12 +31,12 @@
     }
    
     nav button{
-    width: 150px;
-    padding: 0px;
-   
+        width: 150px;
+        padding: 0px;
+    
     }
     nav button a:hover{
-    height: fit-content;
+        height: fit-content;
 
     }
     .hero{
@@ -57,9 +57,9 @@
         /* height: 300px; */
     }
     .hero-content{
-         position: relative;
-        left: -10px;
-        width: 100%;
+       position: relative; 
+       left: -10px;
+       width: 100%;
         
     }
     .hero-content h1{
@@ -71,6 +71,7 @@
          top: -380px;
          left: -60px;
          height: auto;
+         z-index: -4;
 
     }
     .hero-content p{
@@ -122,8 +123,12 @@
         flex-wrap: wrap;
         height: fit-content;
         margin-top:-80px;
-
+        flex-direction: column;
     }
+    .counter-box{
+        width: 100%;
+    }
+    
     .footer-container{
         width: 100%;
         flex-wrap: wrap;
@@ -238,11 +243,12 @@
         width: 100%;
     }
     .project-wrapper{
-         flex-direction: column;
           flex-wrap: wrap;
+        flex-direction: column;
     }
     .project-card{
         width: 100%;
+      
         height: fit-content;
     }
     /* map */
@@ -252,7 +258,6 @@
     .project-iframe iframe{ 
         width: 100%;
         
-       
     }   
     /* team */
     .team-wrapper{
@@ -290,7 +295,7 @@
         margin-left: -10px;  
     }
     nav{
-        width: 400px;
+        width: 430px;
         margin-top: -50px;
         position: fixed;
         left: 200px;
@@ -300,7 +305,7 @@
     }
     nav a{
         font-size: 10px;
-        padding: 5px 8px;
+        padding: 5px 10px;
     }
     nav button{
          padding: 10px 0px;
@@ -477,6 +482,7 @@
     }
     .about-section{
          height: fit-content;
+         width: 95%;
          
     }
     .about-content{
@@ -490,7 +496,6 @@
         width: 50%;
     }
     .about-image {
-        
         height: 400px;
     }
     .about-image img{
@@ -522,8 +527,8 @@
     }
     .scroll-btn i{
         position: fixed;
-        right: 0px;
-        top: 380px;
+        right: 10px;
+        top: 350px;
         bottom: 0px;
     }
     .footer-container{
@@ -543,6 +548,9 @@
         width: 47%;
         flex-direction: row;
         gap: 0px;
+    }
+    .footer-container{
+        height: fit-content;
     }
    
 }
@@ -574,7 +582,7 @@
     nav a:hover{
         color: darkgoldenrod;
         transition: all 0.8s ease;
-    } */
+    } 
     .hero-content{
         width: 200%;
         position: relative;
