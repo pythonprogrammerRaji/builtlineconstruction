@@ -23,12 +23,17 @@
         margin-top: 0px;
         width: 100%;
         text-align: center;
+        flex-direction: column;
     }
     nav a{
         display: block;
         padding: 10px;
         font-size: 15px;
     }
+    nav a:hover{
+    color: darkgoldenrod;
+    transition: all 0.8s ease;
+}
    
     nav button{
         width: 150px;
@@ -98,6 +103,29 @@
     .about-image{
         width: 100%;
     }
+    .property-wrapper{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .property-card{
+        width: 100%;
+    }
+    /* services page*/
+    .service-row{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .service-col{
+        width: 100%;
+    }
+    .services-Cta{
+        flex-wrap: wrap;
+    }
+    .animation-video{
+        margin-top: 20px;
+    }
+
+    /* counter */
     .counter-container{
         flex-wrap: wrap;
         height: fit-content;
@@ -248,7 +276,6 @@
     }
     .project-card{
         width: 100%;
-      
         height: fit-content;
     }
     /* map */
@@ -295,12 +322,15 @@
         margin-left: -10px;  
     }
     nav{
-        width: 430px;
+        width: fit-content;
         margin-top: -50px;
         position: fixed;
         left: 200px;
         top: 80px;
         padding: 0px;
+        display: flex;
+        align-items: center;
+        gap:0px;
         
     }
     nav a{
@@ -309,6 +339,7 @@
     }
     nav button{
          padding: 10px 0px;
+         display: flex;
     }
     .hero{
         margin-top: -110px;
@@ -346,6 +377,32 @@
     .about-image{
         width: 100%;
     }
+    .site-wrapper{
+        flex-wrap: wrap;
+       
+    }
+    .property-wrapper{
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+    }
+    .property-card{
+        width: 100%;
+    }
+        /* services page*/
+    .service-row{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .service-col{
+        width: 100%;
+    }
+    .services-Cta{
+        flex-wrap: wrap;
+    }
+    .animation-video{
+        margin-top: 20px;
+    }
+    /* counter */
     .counter-container{
         flex-wrap: wrap;
         height: fit-content;
@@ -451,7 +508,7 @@
     .projectImage img{
         width: calc((100% - 10px) / 2); 
     }
-     .project-wrapper{
+    .project-wrapper{
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
@@ -476,6 +533,9 @@
         position: fixed;
         top: 0px;
         left: 252px;
+        display: flex;
+        align-items: center;
+        gap:0px;
     }
     nav a{
         font-size: 12px;
