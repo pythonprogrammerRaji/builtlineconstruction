@@ -85,6 +85,7 @@ nav a:hover{
     display: none;
     z-index: 100;
     border: none;
+    padding: 10px;
    
 }
 .dropdown-menu a:hover {
@@ -648,7 +649,7 @@ button.btn-light {
 }
 .text-icons{
     position: relative;
-    left: -45px;
+    left: -15px;
 }
 .text-icons a{
     font-size: 18px;
@@ -1858,9 +1859,13 @@ summary::-webkit-details-marker {
 
 .projectImage img {
     width: calc((100% - 20px) / 3); 
-    height: auto;                   
+    height: 300px;                   
     display: block;                 
-    border-radius: 8px;            
+    border-radius: 8px;  
+    cursor: pointer;          
+}
+.project-image img:hover{
+    transform: translateY(-6px);
 }
 .project-iframe {
     margin: 20px 30px;

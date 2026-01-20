@@ -14,6 +14,9 @@
 
 </head>
 <body>
+    <section class="section-container">
+
+   
        <header>
             <img src="static/images/Logo1.jpg" alt="" class="Image">
                 <nav>
@@ -21,7 +24,12 @@
                     <a href="about.html">ABOUT</a>
                     <a href="services.html">SERVICE</a>
                     <a href="project.html">PROJECTS</a>
-                    <a href="contact.html">CONTACT</a>
+                     <div class="nav-dropdown">
+                        <a href="contact.html">CONTACT</a>
+                        <div class="dropdown-menu" style="width: 150px; padding: 10px;">
+                            <a href="http://127.0.0.1:5000/login">login</a>
+                        </div>
+                    </div>
                     <button><a href="getaquote.html">GET A QUOTE</a></button>
                    
                 </nav>
@@ -117,6 +125,8 @@
             <button type="button" class="contact-btn" onclick="sendEmail()">SEND MESSAGE</button>
         </form>
     </div>
+ </section>
+
 
     <!-- <div class="location">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15551.185152105458!2d77.51463958262781!3d12.984877456463568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3dc128a218d7%3A0xd642f7a077a2ea3f!2sKamakshipalya%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1711883743098!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
