@@ -18,6 +18,7 @@ img{
 .section-container{
     width: 100vw;
    height: 100vh;
+   
 }
 header{
     width: 100%;
@@ -734,6 +735,51 @@ textarea{
     background-color: #b3773a;
 }
 
+/* .error{
+    color: red;
+    font-size: 15px;
+} */
+
+input, textarea, select {
+  border: 1px solid #ccc;
+  outline: none;
+}
+.input-error {
+  border: 2px solid red;
+}
+
+.input-success {
+  border: 2px solid green;
+}
+
+.success {
+  color: green;
+  font-size: 13px;
+}
+
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+.error-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:35%;
+
+}
+
+.activeMsg{
+  color: green;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+
 
 
 /*  */
@@ -1216,6 +1262,7 @@ textarea{
     gap: 70px;
     animation: scrollAnim 25s infinite linear;
     width: max-content;
+
 }
 .scrollContainer .scrollWrapper .item {
     width: 70px;

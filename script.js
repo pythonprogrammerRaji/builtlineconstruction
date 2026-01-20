@@ -1,6 +1,6 @@
-emailjs.init({
-            publicKey: '6upSXP_XXdZIVKN27',
-    });
+// emailjs.init({
+//             publicKey: '6upSXP_XXdZIVKN27',
+// });
 
 const texts = [
     "BUILD YOUR DREAM HOUSE WITH US",
@@ -76,37 +76,37 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(counterSection);
 
 
-function sendEmail(){ 
+// function sendEmail(){ 
     
-        let fname = document.getElementById("firstname").value.trim();
-        let lname = document.getElementById("lastname").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let number = document.getElementById("number").value.trim();
-        let bhk_group = document.querySelector('input[name="bhk"]:checked')?.value || " ";
-        let project = document.getElementById("project").value;
-        let message = document.getElementById("message").value.trim();
+//         let fname = document.getElementById("firstname").value.trim();
+//         let lname = document.getElementById("lastname").value.trim();
+//         let email = document.getElementById("email").value.trim();
+//         let number = document.getElementById("number").value.trim();
+//         let bhk_group = document.querySelector('input[name="bhk"]:checked')?.value || " ";
+//         let project = document.getElementById("project").value;
+//         let message = document.getElementById("message").value.trim();
 
-        let params = {
-            first_name: fname,
-            last_name: lname,
-            from_email: email,
-            from_number: number,
-            from_bhk:bhk_group,
-            from_project:project,
-            message: message
-        }
+//         let params = {
+//             first_name: fname,
+//             last_name: lname,
+//             from_email: email,
+//             from_number: number,
+//             from_bhk:bhk_group,
+//             from_project:project,
+//             message: message
+//         }
 
-    emailjs
-    .send('service_f234mci', 'template_43z54fb', params)
-    .then(()=>{
-        alert('Email Successfully Submitted ✅')
-        document.getElementById("form").reset();    
-    })
-    .catch(()=>{
-        alert("Email can not send!")
-    })
+//     emailjs
+//     .send('service_f234mci', 'template_43z54fb', params)
+//     .then(()=>{
+//         alert('Email Successfully Submitted ✅')
+//         document.getElementById("form").reset();    
+//     })
+//     .catch(()=>{
+//         alert("Email can not send!")
+//     })
    
-}
+// }
 
 index = 0;
 
