@@ -1,26 +1,47 @@
+<?php
+include 'config.php';
+
+$error = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $query = "SELECT * FROM engineers WHERE email='$email' AND password='$password'";
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) == 1) {
+        $_SESSION['engineer'] = $email;
+        header("Location: dashboard.php");
+        exit();
+    } else {
+        $error = "Invalid email or password";
+    }
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}">
+    <title>Engineer Login</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/media.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Site Engineer Login</h2>
 
-        {% if error %}
-            <p class="error">{{ error }}</p>
-        {% endif %}
+<div class="login-container">
+    <h2>Site Engineer Login</h2>
 
-        <form method="POST" action="/login">
-            <input type="email" name="email" placeholder="Email" required><br><br>
-            <input type="password" name="password" placeholder="Password" required><br><br>
-            <button type="submit">Login</button>
-        </form>
-    </div>
+    <?php if($error): ?>
+        <p class="error"><?php echo $error; ?></p>
+    <?php endif; ?>
+
+    <form method="POST" action="login.php">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+</div>
 
 </body>
 </html>

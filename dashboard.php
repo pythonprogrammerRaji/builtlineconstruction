@@ -1,19 +1,34 @@
+<?php
+include 'config.php';
+
+/* If logout button clicked */
+if (isset($_POST['logout'])) {
+    session_destroy();
+    header("Location: index.html");
+    exit();
+}
+
+/* Protect dashboard */
+if (!isset($_SESSION['engineer_email'])) {
+    header("Location: index.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}">
+    <title>Engineer Dashboard</title>
 </head>
 <body>
 
-    <h1>Engineer Dashboard</h1>
-    <p>Welcome! You are logged in.</p>
+    <h2>Welcome Engineer</h2>
+    <p>Email: <?php echo $_SESSION['engineer_email']; ?></p>
 
-<a href="http://127.0.0.1:5500/index.html">Logout</a>g
-    
+    <!-- LOGOUT BUTTON -->
+    <form method="POST">
+        <button type="submit" name="logout">Logout</button>
+    </form>
+
 </body>
 </html>
-
