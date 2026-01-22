@@ -34,7 +34,7 @@
             <div class="nav-dropdown">
                 <a href="contact.html">CONTACT</a>
                 <div class="dropdown-menu">
-                    <a href="http://127.0.0.1:5000/login">login</a>
+                    <!-- <a href="https://builtlineconstruction.com/login.php">Login</a> -->
                 </div>
             </div>
             
@@ -70,12 +70,12 @@
                     <p>We follow a systematic approach to construction with experienced professionals and  skilled workers.
                     Quality control,  on-site safety, and customer satisfaction are our top priorities.
                     Our goal is to deliver dependable construction solutions with long-term value.</p>
-                    <br><br>
+                    <br>
 
                    <p>We provide end-to-end construction services including planning, design coordination,  and project execution.
                     Our work emphasizes structural strength, cost efficiency, and  adherence to industry standards.
                     Each project is managed carefully to ensure quality delivery   within the agreed timeline.</p>
-                    <br><br>
+                    <br>
 
                     <p>Safety, quality, and customer satisfaction are our top priorities. We ensure every project is managed carefully from start to finish to deliver long-lasting value and dependable results within the agreed timeline.</p>  
                 </div>
@@ -1089,12 +1089,78 @@
         </p>
     </div>
 
+    <!-- POPUP -->
+    <div class="bl-popup" id="blPopup">
+
+    <div class="bl-card">
+
+        <span class="bl-close" id="blClose">&times;</span>
+
+        <!-- LEFT IMAGE -->
+        <div class="bl-image">
+        <img src="static/images/builtline.png" alt="Construction">
+        </div>
+
+        <!-- RIGHT FORM -->
+        <!-- <div class="bl-form-area">
+        <h2 class="bl-title">Builtline Construction</h2>
+
+        <form class="bl-form" id="blForm">
+
+            <div class="bl-field">
+            <input type="text" id="blName" name="Name" placeholder="First Name">
+            <small class="bl-error" id="blNameError"></small>
+            </div>
+
+            <div class="bl-field">
+            <input type="email" id="blEmail" name="email" placeholder="yourname@gmail.com">
+            <small class="bl-error" id="blEmailError"></small>
+            </div>
+
+            <div class="bl-field">
+            <input type="tel" id="blPhone" name="Phone" placeholder="10 Digit Phone Number">
+            <small class="bl-error" id="blPhoneError"></small>
+            </div>
+
+            <div class="bl-field bl-radio-group" id="blBhkGroup">
+            <label><input type="radio" name="BHK" value="4 BHK"> 4 BHK</label>
+            <label><input type="radio" name="BHK" value="3 BHK"> 3 BHK</label>
+            <label><input type="radio" name="BHK"  value="2 BHK"> 2 BHK</label>
+            <label><input type="radio" name="BHK"  value="1 BHK"> 1 BHK</label>
+            <small class="bl-error" id="blBhkError"></small>
+            </div>
+
+            <div class="bl-field">
+            <select id="blProject" name="Project Type">
+                <option value="">Select Project Type</option>
+                <option>Interior Design</option>
+                <option>Architecture</option>
+                <option>Construction</option>
+                <option>Renovation</option>
+            </select>
+            <small class="bl-error" id="blProjectError"></small>
+            </div>
+
+            <div class="bl-field">
+            <textarea id="blMessage" name="Message" placeholder="Describe your project" cols="10"></textarea>
+            <small class="bl-error" id="blMessageError"></small>
+            </div>
+
+            <button type="submit" class="bl-btn">Send Message</button>
+
+        </form>
+        </div> -->
+
+    </div>
+    </div>
+
+
     </section>
 
     <script src="script.js"></script>
     <script>
         const cards = document.querySelectorAll('.video-card');
-        const popup = document.getElementById('videoPopup');
+        const videopopup = document.getElementById('videoPopup');
         const iframe = document.getElementById('videoFrame');
 
         cards.forEach(card => {
@@ -1104,15 +1170,185 @@
                 // IMPORTANT: change iframe src every time
                 iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
 
-                popup.style.display = 'flex';
+                videopopup.style.display = 'flex';
             });
         });
 
         function closeVideo() {
             iframe.src = "";   // stop previous video
-            popup.style.display = 'none';
+            videopopup.style.display = 'none';
         }
     </script>
+
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+        const popup = document.getElementById("blPopup");
+        const closeBtn = document.getElementById("blClose");
+        const form = document.getElementById("blForm");
+
+        
+        setTimeout(() => {
+            popup.classList.add("show");
+        }, 800);
+
+        
+        closeBtn.addEventListener("click", () => {
+            popup.classList.remove("show");
+        });
+
+       
+        const phone = document.getElementById("blPhone");
+        const location = document.getElementById("blLocation");
+        const project = document.getElementById("blProject");
+        const terms = document.getElementById("blTerms");
+
+        
+        function isFormValid() {
+            if (phone.value.trim() === "") {
+            alert("Phone number is required");
+            phone.focus();
+            return false;
+            }
+
+            if (!/^[6-9]\d{9}$/.test(phone.value)) {
+            alert("Enter valid 10-digit phone number");
+            phone.focus();
+            return false;
+            }
+
+            if (location.value.trim() === "") {
+            alert("Location is required");
+            location.focus();
+            return false;
+            }
+
+            if (project.value === "") {
+            alert("Please select project type");
+            project.focus();
+            return false;
+            }
+
+            if (!terms.checked) {
+            alert("Please accept Terms & Conditions");
+            return false;
+            }
+
+            return true;
+        }
+
+       
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); 
+
+            if (!isFormValid()) return;
+
+            const formData = new FormData(form);
+
+            fetch("https://formspree.io/f/mnjjoven", {  
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+            })
+            .then(response => {
+            if (response.ok) {
+                alert("Form submitted successfully!");
+                form.reset();
+                popup.classList.remove("show");
+            } else {
+                alert("Submission failed. Try again.");
+            }
+            })
+            .catch(() => {
+            alert("Network error. Please try later.");
+            });
+        });
+
+        });
+    </script> -->
+
+<!-- <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const popup = document.getElementById("blPopup");
+  const closeBtn = document.getElementById("blClose");
+  const form = document.getElementById("blForm");
+
+  const phone = document.getElementById("blPhone");
+  const location = document.getElementById("blLocation");
+  const project = document.getElementById("blProject");
+  const terms = document.getElementById("blTerms");
+
+  // show popup
+  setTimeout(() => popup.classList.add("show"), 700);
+
+  // close popup
+  closeBtn.onclick = () => popup.classList.remove("show");
+
+  // submit
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); 
+
+    if (phone.value.trim() === "") {
+      alert("Enter phone number");
+      return;
+    }
+
+    if (!/^[6-9]\d{9}$/.test(phone.value)) {
+      alert("Enter valid phone number");
+      return;
+    }
+
+    // if (location.value.trim() === "") {
+    //   alert("Enter location");
+    //   return;
+    // }
+
+    if (project.value === "") {
+      alert("Select project type");
+      return;
+    }
+
+    // if (!terms.checked) {
+    //   alert("Accept terms & conditions");
+    //   return;
+    // }
+
+    const data = {
+      name: blName.value.trim(),
+      email: blEmail.value.trim(),
+      phone: blPhone.value.trim(),
+      bhk: document.querySelector('input[name="BHK"]:checked').value,
+      project: blProject.value,
+      message: blMessage.value.trim()
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbwjdxBTpm6_B1h1fiHeEVn0ZTHWNBSqkS20dsQYCFn2W01E5XvPYzlUB9vXoyCHezBu/exec", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+    })
+    .then(() => {
+    alert("✅ Form submitted successfully!");
+    form.reset();
+    popup.classList.remove("show");
+    })
+    .catch(() => {
+    alert("❌ Submission failed. Try again.");
+    });
+
+});
+
+});
+
+</script> -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
     <script>

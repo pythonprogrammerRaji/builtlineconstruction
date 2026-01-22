@@ -9,6 +9,7 @@ html body{
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+   background: white !important;
 }
 img{
     max-width: 100%;
@@ -18,7 +19,6 @@ img{
 .section-container{
     width: 100vw;
    height: 100vh;
-   
 }
 header{
     width: 100%;
@@ -215,7 +215,7 @@ nav button a:hover{
 /* about */
 
 .about-section{
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     margin: 0px;
     /* height:fit-content; */
@@ -226,7 +226,7 @@ nav button a:hover{
     width: 100%;
     height: fit-content;
     width: 100vw;
-    margin: 20px;
+   
     
     
 }
@@ -438,6 +438,44 @@ button.btn-light {
   z-index: 1;
 }
 
+.vm-card{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
+    align-items: center;
+}
+.vm-image{
+    width: 550px ;
+    
+}
+.vm-image img{
+    width: 100%;
+    height: 40%;
+  border-radius: 20px;
+}
+.vm-content{
+    display: grid;
+    grid-template-rows:  auto;
+    gap: 20px;
+}
+.vm-box {
+  /* border: 2px solid #d4a017;  */
+  padding: 25px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.vm-box h2{
+    margin-bottom: 10px;
+    color: #333;
+
+}
+.vm-box p{
+    color: gray;
+    font-size: 18px;
+line-height: 1.6;
+}
 @media (max-width: 900px) {
   .ceo-card {
     flex-direction: column;
@@ -466,7 +504,7 @@ button.btn-light {
     display: flex;
     justify-content: space-between;
     padding: 40px 10px;
-    background: #f9f9f9;
+      background-color: white;
     height: fit-content;
     margin-top: -130px;
     width: 100vw;
@@ -990,6 +1028,7 @@ input, textarea, select {
 .team-container{
    width: 100%;
    padding: 20px 8%;
+     background-color: white;
     
 }
 .team-wrapper{
@@ -1098,6 +1137,7 @@ input, textarea, select {
 .template-container{
     width: 100vw !important;
     padding: 20px 0px;
+      background-color: white;
 }
 .template-box{
     display: flex;
@@ -1156,23 +1196,23 @@ input, textarea, select {
     position: relative;
     left: 80px;
     top: 10px;
-    
-     
 
 }
-.image2{
-    width: 250px;
-    height: 220px;
+.image2 {
+    width: 180px;
+    height: 170px;
     position: relative;
-    top: -30px;
-    left: 20px;
+    top: -0px;
+    left: 40px;
     /* margin-top: -40px;
     margin-left: -50px; */
     
 }
+
 .process-test{
     position: relative;
-    top: -70px;
+    top: -20px;
+    left: -20px;
 }
 
 
@@ -1248,6 +1288,9 @@ input, textarea, select {
     width: 90vw;
     margin: 20px auto;
     overflow-x: hidden;
+    
+    padding: 0
+    ;
  }
 
     /* stop animation on hover */
@@ -1256,12 +1299,14 @@ input, textarea, select {
     } */
 .scrollWrapper{
     margin: 20px auto;
+    background: white;
 }
 .scrollContainer .scrollWrapper {
     display: flex;
     gap: 70px;
     animation: scrollAnim 25s infinite linear;
     width: max-content;
+    
 
 }
 .scrollContainer .scrollWrapper .item {
@@ -1317,6 +1362,7 @@ input, textarea, select {
    
 }
 .testimonials-wrapper{
+    display: flex;
     display: flex;
     gap: 20px;
     width: max-content;
@@ -1458,7 +1504,6 @@ input, textarea, select {
     transform: translate(-50%, -50%);
     font-size: 40px;
     color: white;
-    /* background: rgba(0,0,0,0.6); */
     padding: 15px 20px;
     border-radius: 50%;
 }
@@ -1727,7 +1772,7 @@ summary::-webkit-details-marker {
     border-radius: 20px;
 }
 
-        /* Navbar for floors */
+    /* Navbar for floors */
 .navbar {
     display: flex;
     justify-content: center;
@@ -2130,4 +2175,118 @@ body {
     .login-container h2 {
         font-size: 22px;
     }
+}
+
+/* popup */
+
+.bl-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.bl-popup.show {
+  visibility: visible;
+}
+
+.bl-card {
+  width: 90%;
+  max-width: 950px;
+  background: #fff;
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  max-height: 600px;
+  top: 40px;
+}
+
+.bl-image {
+  width: 45%;
+}
+
+.bl-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bl-form-area {
+  width: 55%;
+  padding: 30px;
+}
+
+.bl-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bl-field {
+  margin-bottom: 12px;
+}
+
+.bl-field input,
+.bl-field select,
+.bl-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.bl-field textarea {
+  resize: none;
+  height: 0px;
+}
+
+.bl-radio-group {
+ display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 50px;
+   white-space: nowrap;
+}
+
+.bl-btn {
+  width: 100%;
+  padding: 12px;
+  background: #0066ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.bl-btn:hover {
+  background: #004ecc;
+}
+
+.bl-error {
+  font-size: 12px;
+  color: red;
+}
+
+.bl-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .bl-card {
+    flex-direction: column;
+  }
+  .bl-image {
+    width: 100%;
+    height: 200px;
+  }
+  .bl-form-area {
+    width: 100%;
+  }
 }

@@ -1,19 +1,19 @@
 <?php
-include 'config.php';
+session_start();
 
-/* If logout button clicked */
+if (!isset($_SESSION['engineer'])) {
+    header("Location: index.html");
+    exit();
+}
+
+/* logout inside dashboard */
 if (isset($_POST['logout'])) {
     session_destroy();
     header("Location: index.html");
     exit();
 }
-
-/* Protect dashboard */
-if (!isset($_SESSION['engineer_email'])) {
-    header("Location: index.html");
-    exit();
-}
 ?>
+
 
 <!DOCTYPE html>
 <html>
