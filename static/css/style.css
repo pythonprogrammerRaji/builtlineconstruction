@@ -2140,6 +2140,7 @@ body {
     border: 1px solid #ccc;
     outline: none;
     transition: 0.3s;
+    margin-bottom: 20px;
 }
 
 .login-container input:focus {
@@ -2164,6 +2165,23 @@ body {
 
 .login-container button:hover {
     background: #e68900;
+}
+
+.logout-btn{
+    padding: 10px;
+    background-color: darkgoldenrod;
+    font-size: 18px;
+    position: relative;
+    top: 0;
+    right: 0;
+    color: #000;
+    border-radius: 10px;
+    border: 1px solid darkgoldenrod;
+}
+.logout-btn:hover{
+    background-color: #fff;
+    color:  darkgoldenrod;
+    transition: 2s ease-in;
 }
 
 /* ===== RESPONSIVE ===== */

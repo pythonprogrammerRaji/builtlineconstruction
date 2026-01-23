@@ -19,16 +19,20 @@ if (isset($_POST['logout'])) {
 <html>
 <head>
     <title>Engineer Dashboard</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/media.css">
 </head>
 <body>
+
+    <form method="POST">
+        <button type="submit" name="logout" class="logout-btn">Logout</button>
+    </form>
 
     <h2>Welcome Engineer</h2>
     <p>Email: <?php echo $_SESSION['engineer_email']; ?></p>
 
     <!-- LOGOUT BUTTON -->
-    <form method="POST">
-        <button type="submit" name="logout">Logout</button>
-    </form>
+    
 
 </body>
 </html>
