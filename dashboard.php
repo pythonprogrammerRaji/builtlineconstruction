@@ -29,9 +29,9 @@ if (isset($_POST['logout'])) {
     </form>
 
     <h2>Welcome Engineer</h2>
-    <p>Email: <?php echo $_SESSION['engineer_email']; ?></p>
+    <p>Email: <?php echo $_SESSION['engineer']; ?></p>
 
-    <!-- LOGOUT BUTTON -->
+   
     
 
 </body>

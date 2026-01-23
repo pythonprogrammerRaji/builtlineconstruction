@@ -2308,3 +2308,9 @@ body {
     width: 100%;
   }
 }
+
+/* blogs */
+
+.blogs-container{
+    margin-top: 40px;
+}
