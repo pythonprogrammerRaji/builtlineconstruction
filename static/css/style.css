@@ -440,15 +440,13 @@ button.btn-light {
 
 .vm-card{
     margin-top: 80px;
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
+   display: flex;
+    justify-content: center;
     gap: 20px;
     align-items: center;
-}
-.vm-image{
-    width: 550px ;
     
 }
+
 .vm-image img{
     width: 100%;
     height: 40%;

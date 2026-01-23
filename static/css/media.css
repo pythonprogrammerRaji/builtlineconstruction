@@ -302,6 +302,11 @@
     .copyright{
         height: fit-content;
     }
+    /* .vm-card */
+    .vm-card{
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
 }
 /* tables */
 @media (min-width: 601px) and (max-width: 900px) {
@@ -377,6 +382,7 @@
     .about-image{
         width: 100%;
     }
+    
     .site-wrapper{
         flex-wrap: wrap;
        
@@ -401,6 +407,10 @@
     }
     .animation-video{
         margin-top: 20px;
+    }
+      .vm-card{
+        flex-wrap: wrap;
+        margin-bottom: 20px;
     }
     /* counter */
     .counter-container{
