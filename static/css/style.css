@@ -504,7 +504,7 @@ line-height: 1.6;
     display: flex;
     justify-content: space-between;
     padding: 40px 10px;
-      background-color: white;
+    background-color: white;
     height: fit-content;
     margin-top: -130px;
     width: 100vw;
@@ -547,7 +547,7 @@ line-height: 1.6;
     padding: 20px 7%;
     gap: 60px;
     height: 70%;
-    flex-wrap: wrap;  
+    /* flex-wrap: wrap;   */
 }
 
 .footer-box{
@@ -1137,28 +1137,32 @@ input, textarea, select {
 .template-container{
     width: 100vw !important;
     padding: 20px 0px;
-      background-color: white;
+    background-color: white;
+    
+    
 }
 .template-box{
     display: flex;
     align-items:center;
     justify-content: center;
     gap: 40px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100vw;
    
 }
 
 
 .template-card{
+    flex-grow: 1;
+    flex-basis: 200px;
     position: relative;
     width: 270px;
     height: 320px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)
      -5px -5px 10px rgba(0, 0, 0, 0.05);
-     cursor: pointer;
-     flex-shrink: 0;
-     margin-top: 40px
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 40px
 }
 
 .template-inner{
@@ -1204,8 +1208,6 @@ input, textarea, select {
     position: relative;
     top: -0px;
     left: 40px;
-    /* margin-top: -40px;
-    margin-left: -50px; */
     
 }
 
@@ -1242,11 +1244,11 @@ input, textarea, select {
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2)
      -5px -5px 10px rgba(0, 0, 0, 0.05);
-     text-align: center;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 
 }
 
@@ -1288,9 +1290,7 @@ input, textarea, select {
     width: 90vw;
     margin: 20px auto;
     overflow-x: hidden;
-    
-    padding: 0
-    ;
+    padding: 0;
  }
 
     /* stop animation on hover */
@@ -1813,7 +1813,7 @@ summary::-webkit-details-marker {
 /* Floors cards container */
 .floors-container {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     gap: 20px;
     justify-content: center;
@@ -2171,10 +2171,10 @@ body {
     padding: 10px;
     background-color: darkgoldenrod;
     font-size: 18px;
-    position: relative;
-    top: 0;
-    right: 0;
-    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
     border-radius: 10px;
     border: 1px solid darkgoldenrod;
 }
