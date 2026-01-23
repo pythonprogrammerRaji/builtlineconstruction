@@ -1,3 +1,4 @@
-<?php
-echo "PHP is working";
-?>
+
+    <?php if (!empty($error)) : ?>
+        <p class="error"><?php echo $error; ?></p>
+    <?php endif; ?>
